@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_experiment_frames",
+  "info": {
+    "displayName": "experiment_frame"
+  },
+  "options": {},
+  "attributes": {
+    "target_user_profile": {
+      "type": "text"
+    },
+    "usage_context": {
+      "type": "text"
+    },
+    "tools_and_data": {
+      "type": "text"
+    },
+    "test_duration": {
+      "type": "text"
+    },
+    "out_of_scope": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

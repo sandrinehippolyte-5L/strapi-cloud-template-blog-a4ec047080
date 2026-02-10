@@ -1,0 +1,125 @@
+{
+  "kind": "collectionType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-case",
+    "pluralName": "use-cases",
+    "displayName": "Use cases"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usecase_type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Missions",
+        "Retour d'expérience (avant 5LEGS)",
+        "Cas pratique"
+      ]
+    },
+    "main_visual": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title_question": {
+      "type": "string",
+      "required": true
+    },
+    "context": {
+      "type": "text",
+      "required": true
+    },
+    "objectives": {
+      "type": "component",
+      "component": "shared.takeaway",
+      "repeatable": true,
+      "required": true,
+      "max": 8
+    },
+    "note": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title_question"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "mappedBy": "use_cases"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "use_cases"
+    },
+    "keywords_custom": {
+      "type": "string"
+    },
+    "intro_intervention_5legs": {
+      "type": "text"
+    },
+    "client_context": {
+      "type": "text"
+    },
+    "client_question_verbatim": {
+      "type": "text"
+    },
+    "hypothesis_tested": {
+      "type": "text"
+    },
+    "experiment_frame": {
+      "type": "component",
+      "component": "shared.experiment-frame",
+      "repeatable": true
+    },
+    "solution_as_used": {
+      "type": "text"
+    },
+    "what_users_did": {
+      "type": "text"
+    },
+    "value": {
+      "type": "text"
+    },
+    "issues": {
+      "type": "text"
+    },
+    "limits_and_watchouts": {
+      "type": "text"
+    },
+    "when_it_is_relevant": {
+      "type": "text"
+    },
+    "actionable_conclusion": {
+      "type": "text"
+    },
+    "key_takeaways": {
+      "type": "component",
+      "component": "shared.takeaway",
+      "repeatable": true,
+      "max": 5
+    },
+    "transparency_note": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": true
+    },
+    "content_en": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_takeaways",
+  "info": {
+    "displayName": "Takeaway"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

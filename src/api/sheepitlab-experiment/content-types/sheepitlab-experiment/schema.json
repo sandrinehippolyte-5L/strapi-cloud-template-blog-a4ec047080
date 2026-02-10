@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sheepitlab_experiments",
+  "info": {
+    "singularName": "sheepitlab-experiment",
+    "pluralName": "sheepitlab-experiments",
+    "displayName": "Sheepitlab experiments"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sheepitlab_status": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "En test",
+        "En préparation",
+        "À venir"
+      ]
+    },
+    "main_visual": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "code_name": {
+      "type": "string",
+      "required": true
+    },
+    "title_question": {
+      "type": "string",
+      "required": true
+    },
+    "hypothesis": {
+      "type": "text",
+      "required": true
+    },
+    "key_takeaways": {
+      "type": "component",
+      "component": "shared.takeaway",
+      "repeatable": true,
+      "required": true,
+      "max": 5
+    },
+    "our_advice": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title_question"
+    },
+    "people": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "mappedBy": "sheepitlab_experiments"
+    },
+    "Tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "sheepitlab_experiments"
+    },
+    "keywords_custom": {
+      "type": "string"
+    },
+    "intro_5legs": {
+      "type": "text"
+    },
+    "short_answer": {
+      "type": "text"
+    },
+    "why_this_question": {
+      "type": "text"
+    },
+    "experiment_frame": {
+      "type": "component",
+      "component": "shared.experiment-frame",
+      "repeatable": false
+    },
+    "product_as_shipped": {
+      "type": "text"
+    },
+    "what_users_did": {
+      "type": "text"
+    },
+    "what_works": {
+      "type": "text"
+    },
+    "what_doesnt": {
+      "type": "text"
+    },
+    "limits_and_risks": {
+      "type": "text"
+    },
+    "can_it_be_a_real_product": {
+      "type": "text"
+    },
+    "actionable_conclusion": {
+      "type": "text"
+    },
+    "transparency_note": {
+      "type": "text"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "content_en": {
+      "type": "json"
+    }
+  }
+}

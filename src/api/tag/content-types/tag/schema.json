@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tags"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Méthode",
+        "Outil",
+        "Concept IA",
+        "Problème",
+        "Contexte",
+        "Secteur"
+      ]
+    },
+    "sheepitlab_experiments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sheepitlab-experiment.sheepitlab-experiment",
+      "mappedBy": "Tags"
+    },
+    "use_cases": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::use-case.use-case",
+      "inversedBy": "tags"
+    }
+  }
+}
