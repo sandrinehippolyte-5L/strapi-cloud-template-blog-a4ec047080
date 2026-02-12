@@ -101,12 +101,6 @@
     "what_users_did": {
       "type": "text"
     },
-    "value": {
-      "type": "text"
-    },
-    "issues": {
-      "type": "text"
-    },
     "limits_and_watchouts": {
       "type": "text"
     },

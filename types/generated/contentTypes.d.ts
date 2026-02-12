@@ -655,7 +655,6 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     >;
     hypothesis_tested: Schema.Attribute.Text;
     intro_intervention_5legs: Schema.Attribute.Text;
-    issues: Schema.Attribute.Text;
     key_takeaways: Schema.Attribute.Component<'shared.takeaway', true> &
       Schema.Attribute.SetMinMax<
         {
@@ -699,7 +698,6 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
       ['Missions', "Retour d'exp\u00E9rience (avant 5LEGS)", 'Cas pratique']
     > &
       Schema.Attribute.Required;
-    value: Schema.Attribute.Text;
     what_users_did: Schema.Attribute.Text;
     when_it_is_relevant: Schema.Attribute.Text;
     why_question: Schema.Attribute.Text;
