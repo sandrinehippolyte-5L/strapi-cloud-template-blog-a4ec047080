@@ -28,10 +28,6 @@
         "images"
       ]
     },
-    "title_question": {
-      "type": "string",
-      "required": true
-    },
     "context": {
       "type": "text",
       "required": true
@@ -66,13 +62,20 @@
     "keywords_custom": {
       "type": "string"
     },
+    "title_question": {
+      "type": "string",
+      "required": true
+    },
+    "client_question_verbatim": {
+      "type": "text"
+    },
     "intro_intervention_5legs": {
       "type": "text"
     },
     "client_context": {
       "type": "text"
     },
-    "client_question_verbatim": {
+    "why_question": {
       "type": "text"
     },
     "hypothesis_tested": {
@@ -83,7 +86,16 @@
       "component": "shared.experiment-frame",
       "repeatable": true
     },
+    "shortanswer": {
+      "type": "text"
+    },
+    "product_choices": {
+      "type": "text"
+    },
     "solution_as_used": {
+      "type": "text"
+    },
+    "product_evolutions": {
       "type": "text"
     },
     "what_users_did": {
@@ -120,6 +132,11 @@
     },
     "content_en": {
       "type": "json"
+    },
+    "signature": {
+      "type": "component",
+      "component": "shared.contextual-signature",
+      "repeatable": true
     }
   }
 }

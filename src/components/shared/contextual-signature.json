@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_contextual_signatures",
+  "info": {
+    "displayName": "contextual_signature"
+  },
+  "options": {},
+  "attributes": {
+    "Contextual_signature": {
+      "type": "text"
+    },
+    "Contextual_CTA": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

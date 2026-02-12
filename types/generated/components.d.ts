@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedContextualSignature extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contextual_signatures';
+  info: {
+    displayName: 'contextual_signature';
+  };
+  attributes: {
+    Contextual_CTA: Schema.Attribute.String;
+    Contextual_signature: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedExperimentFrame extends Struct.ComponentSchema {
   collectionName: 'components_shared_experiment_frames';
   info: {
@@ -41,6 +52,7 @@ export interface SharedTakeaway extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.contextual-signature': SharedContextualSignature;
       'shared.experiment-frame': SharedExperimentFrame;
       'shared.seo': SharedSeo;
       'shared.takeaway': SharedTakeaway;

@@ -681,8 +681,12 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
         },
         number
       >;
+    product_choices: Schema.Attribute.Text;
+    product_evolutions: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', true>;
+    shortanswer: Schema.Attribute.Text;
+    signature: Schema.Attribute.Component<'shared.contextual-signature', true>;
     slug: Schema.Attribute.UID<'title_question'>;
     solution_as_used: Schema.Attribute.Text;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
@@ -698,6 +702,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     value: Schema.Attribute.Text;
     what_users_did: Schema.Attribute.Text;
     when_it_is_relevant: Schema.Attribute.Text;
+    why_question: Schema.Attribute.Text;
   };
 }
 
