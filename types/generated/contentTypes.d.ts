@@ -529,7 +529,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
   };
   attributes: {
     actionable_conclusion: Schema.Attribute.Text;
-    can_it_be_a_real_product: Schema.Attribute.Text;
+    Callout: Schema.Attribute.Text;
     code_name: Schema.Attribute.String & Schema.Attribute.Required;
     content_en: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
@@ -571,6 +571,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     > &
       Schema.Attribute.Required;
     short_answer: Schema.Attribute.Text;
+    Signature: Schema.Attribute.Component<'shared.contextual-signature', false>;
     slug: Schema.Attribute.UID<'title_question'>;
     Tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title_question: Schema.Attribute.String & Schema.Attribute.Required;

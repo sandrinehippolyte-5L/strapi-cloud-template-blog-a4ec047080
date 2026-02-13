@@ -102,10 +102,10 @@
     "limits_and_risks": {
       "type": "text"
     },
-    "can_it_be_a_real_product": {
+    "actionable_conclusion": {
       "type": "text"
     },
-    "actionable_conclusion": {
+    "Callout": {
       "type": "text"
     },
     "transparency_note": {
@@ -118,6 +118,11 @@
     },
     "content_en": {
       "type": "json"
+    },
+    "Signature": {
+      "type": "component",
+      "component": "shared.contextual-signature",
+      "repeatable": false
     }
   }
 }
