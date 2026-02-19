@@ -498,13 +498,22 @@ export interface ApiPersonPerson extends Struct.CollectionTypeSchema {
       ]
     > &
       Schema.Attribute.Required;
+    pillar_en: Schema.Attribute.Enumeration<
+      [
+        'Vision & organization',
+        'Conception & implementation',
+        'Go to market & growth',
+      ]
+    >;
     publishedAt: Schema.Attribute.DateTime;
     role_title: Schema.Attribute.String & Schema.Attribute.Required;
+    role_title_en: Schema.Attribute.String;
     sheepitlab_experiments: Schema.Attribute.Relation<
       'manyToMany',
       'api::sheepitlab-experiment.sheepitlab-experiment'
     >;
     short_bio: Schema.Attribute.String & Schema.Attribute.Required;
+    short_bio_en: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -23,6 +23,10 @@
       "type": "string",
       "required": true
     },
+    "role_title_en": {
+      "type": "string",
+      "required": false
+    },
     "pillar": {
       "type": "enumeration",
       "required": true,
@@ -32,9 +36,20 @@
         "Go to market & growth"
       ]
     },
+    "pillar_en": {
+      "type": "enumeration",
+      "enum": [
+        "Vision & organization",
+        "Conception & implementation",
+        "Go to market & growth"
+      ]
+    },
     "short_bio": {
       "type": "string",
       "required": true
+    },
+    "short_bio_en": {
+      "type": "string"
     },
     "avatar": {
       "type": "media",

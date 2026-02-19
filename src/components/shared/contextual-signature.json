@@ -8,7 +8,13 @@
     "Contextual_signature": {
       "type": "text"
     },
+    "Contextual_signature_en": {
+      "type": "string"
+    },
     "Contextual_CTA": {
+      "type": "string"
+    },
+    "Contextual_CTA_en": {
       "type": "string"
     }
   },
