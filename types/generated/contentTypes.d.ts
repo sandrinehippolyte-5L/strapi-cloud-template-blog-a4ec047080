@@ -700,6 +700,10 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', true>;
     shortanswer: Schema.Attribute.Text;
+    showcase_gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     signature: Schema.Attribute.Component<'shared.contextual-signature', true>;
     slug: Schema.Attribute.UID<'title_question'>;
     solution_as_used: Schema.Attribute.Text;
