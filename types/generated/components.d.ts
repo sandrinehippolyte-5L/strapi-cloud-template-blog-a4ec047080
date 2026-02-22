@@ -9,7 +9,7 @@ export interface SharedContextualSignature extends Struct.ComponentSchema {
     Contextual_CTA: Schema.Attribute.String;
     Contextual_CTA_en: Schema.Attribute.String;
     Contextual_signature: Schema.Attribute.Text;
-    Contextual_signature_en: Schema.Attribute.String;
+    Contextual_signature_en: Schema.Attribute.Text;
   };
 }
 

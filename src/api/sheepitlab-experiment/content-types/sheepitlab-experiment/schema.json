@@ -123,6 +123,17 @@
       "type": "component",
       "component": "shared.contextual-signature",
       "repeatable": false
+    },
+    "showcase_gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

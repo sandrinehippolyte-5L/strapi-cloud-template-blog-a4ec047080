@@ -580,6 +580,11 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     > &
       Schema.Attribute.Required;
     short_answer: Schema.Attribute.Text;
+    showcase_gallery: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
     Signature: Schema.Attribute.Component<'shared.contextual-signature', false>;
     slug: Schema.Attribute.UID<'title_question'>;
     Tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
