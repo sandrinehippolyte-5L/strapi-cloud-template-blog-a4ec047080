@@ -576,7 +576,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     sheepitlab_status: Schema.Attribute.Enumeration<
-      ['En test', 'En pr\u00E9paration', '\u00C0 venir']
+      ['Live ', 'En test', 'En pr\u00E9paration', '\u00C0 venir']
     > &
       Schema.Attribute.Required;
     short_answer: Schema.Attribute.Text;
