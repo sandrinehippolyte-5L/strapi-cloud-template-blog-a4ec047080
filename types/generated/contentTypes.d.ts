@@ -665,6 +665,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     client_question_verbatim: Schema.Attribute.Text;
     content_en: Schema.Attribute.JSON;
     context: Schema.Attribute.Text & Schema.Attribute.Required;
+    context_en: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -691,6 +692,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     main_visual: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     note: Schema.Attribute.Text & Schema.Attribute.Required;
+    note_en: Schema.Attribute.Text;
     objectives: Schema.Attribute.Component<'shared.takeaway', true> &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMax<
@@ -699,6 +701,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
         },
         number
       >;
+    objectives_en: Schema.Attribute.Component<'shared.takeaway', true>;
     product_choices: Schema.Attribute.Text;
     product_evolutions: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
@@ -713,6 +716,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     solution_as_used: Schema.Attribute.Text;
     tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title_question: Schema.Attribute.String & Schema.Attribute.Required;
+    title_question_en: Schema.Attribute.String;
     transparency_note: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
