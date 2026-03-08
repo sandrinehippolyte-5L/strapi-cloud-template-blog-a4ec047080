@@ -549,6 +549,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
       false
     >;
     hypothesis: Schema.Attribute.Text & Schema.Attribute.Required;
+    hypothesis_en: Schema.Attribute.Text;
     intro_5legs: Schema.Attribute.Text;
     key_takeaways: Schema.Attribute.Component<'shared.takeaway', true> &
       Schema.Attribute.Required &
@@ -558,6 +559,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
         },
         number
       >;
+    key_takeaways_en: Schema.Attribute.Component<'shared.takeaway', true>;
     keywords_custom: Schema.Attribute.String;
     limits_and_risks: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -571,6 +573,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     > &
       Schema.Attribute.Required;
     our_advice: Schema.Attribute.Text & Schema.Attribute.Required;
+    our_advice_en: Schema.Attribute.Text;
     people: Schema.Attribute.Relation<'manyToMany', 'api::person.person'>;
     product_as_shipped: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
@@ -589,6 +592,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     slug: Schema.Attribute.UID<'title_question'>;
     Tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title_question: Schema.Attribute.String & Schema.Attribute.Required;
+    title_question_en: Schema.Attribute.String;
     transparency_note: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

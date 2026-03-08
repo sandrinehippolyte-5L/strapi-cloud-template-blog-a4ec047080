@@ -135,6 +135,20 @@
         "videos",
         "audios"
       ]
+    },
+    "title_question_en": {
+      "type": "string"
+    },
+    "hypothesis_en": {
+      "type": "text"
+    },
+    "key_takeaways_en": {
+      "type": "component",
+      "component": "shared.takeaway",
+      "repeatable": true
+    },
+    "our_advice_en": {
+      "type": "text"
     }
   }
 }
