@@ -145,7 +145,7 @@
     "title_question_en": {
       "type": "string"
     },
-    "context_en": {
+    "shortanswer_en": {
       "type": "text"
     },
     "note_en": {

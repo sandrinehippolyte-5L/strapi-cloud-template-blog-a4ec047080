@@ -665,7 +665,6 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     client_question_verbatim: Schema.Attribute.Text;
     content_en: Schema.Attribute.JSON;
     context: Schema.Attribute.Text & Schema.Attribute.Required;
-    context_en: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -707,6 +706,7 @@ export interface ApiUseCaseUseCase extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', true>;
     shortanswer: Schema.Attribute.Text;
+    shortanswer_en: Schema.Attribute.Text;
     showcase_gallery: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
