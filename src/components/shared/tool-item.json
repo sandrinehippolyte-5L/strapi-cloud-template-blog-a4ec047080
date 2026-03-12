@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_tool_items",
+  "info": {
+    "displayName": "Tool Item"
+  },
+  "options": {},
+  "attributes": {
+    "tool_name": {
+      "type": "string",
+      "required": true
+    },
+    "tool_role": {
+      "type": "string"
+    },
+    "tool_description": {
+      "type": "text"
+    },
+    "tool_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

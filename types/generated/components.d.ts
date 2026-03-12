@@ -51,6 +51,19 @@ export interface SharedTakeaway extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedToolItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tool_items';
+  info: {
+    displayName: 'Tool Item';
+  };
+  attributes: {
+    tool_description: Schema.Attribute.Text;
+    tool_logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tool_name: Schema.Attribute.String & Schema.Attribute.Required;
+    tool_role: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -58,6 +71,7 @@ declare module '@strapi/strapi' {
       'shared.experiment-frame': SharedExperimentFrame;
       'shared.seo': SharedSeo;
       'shared.takeaway': SharedTakeaway;
+      'shared.tool-item': SharedToolItem;
     }
   }
 }
