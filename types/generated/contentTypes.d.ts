@@ -593,6 +593,7 @@ export interface ApiSheepitlabExperimentSheepitlabExperiment
     Tags: Schema.Attribute.Relation<'manyToMany', 'api::tag.tag'>;
     title_question: Schema.Attribute.String & Schema.Attribute.Required;
     title_question_en: Schema.Attribute.String;
+    Tools: Schema.Attribute.Component<'shared.tool-item', true>;
     transparency_note: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

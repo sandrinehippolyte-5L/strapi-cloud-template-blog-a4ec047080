@@ -149,6 +149,11 @@
     },
     "our_advice_en": {
       "type": "text"
+    },
+    "Tools": {
+      "type": "component",
+      "component": "shared.tool-item",
+      "repeatable": true
     }
   }
 }
